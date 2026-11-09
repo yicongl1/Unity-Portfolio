@@ -126,7 +126,7 @@ https://github.com/yicongl1/Unity-Portfolio/releases/latest
 
 > 这些可执行文件是学习时期导出的旧构建，整理时对源码做的修复（例如 `PullTheBox` 场景、暂停逻辑）不会自动反映到 exe 中。如需体验最新行为，请用 Unity 打开对应源码工程运行。
 >
-> 可执行版本不提交进 Git 仓库；本地 `builds/` 目录仅作为备份保留，已被 `.gitignore` 忽略。
+> 可执行版本不保存在本地仓库中，统一通过 GitHub Releases 下载。
 
 ### 用 Unity 打开源码
 
@@ -175,7 +175,7 @@ Unity-Portfolio/
 └─ README.md
 ```
 
-> `builds/` 是本地保留的可执行版本，已被 `.gitignore` 忽略；发布时作为 GitHub Releases 的附件上传，不进入 Git 仓库。
+> 构建产物不保存在仓库中，统一通过 GitHub Releases 发布和下载。
 
 ---
 
@@ -204,7 +204,7 @@ Unity-Portfolio/
 - 统一了 C# 源文件的尾随空格与文件末尾换行。
 - 补上了 `01-rolling-ball-arcade` 中 `PullTheBox` 场景的 Build Settings 配置，使菜单里的「拉箱子」入口可以正常加载。
 - 修复了几处学习期遗留的小问题：Maze 的 Esc 暂停判断、`CoinReset` 的场景名、飞龙射击 UI 的重复加载、变色跑酷开始界面的空引用、角色移动在零输入时的 `LookAt` 警告。
-- 可执行版本从 Git 中移除，改为通过 GitHub Releases 发布；`builds/` 仅本地保留。
+- 可执行版本不进入 Git 仓库，统一通过 GitHub Releases 发布。
 - 原始压缩包和原始目录仍保留在上级目录中，未做删除或覆盖。
 
 ### 已知限制
@@ -227,7 +227,7 @@ Unity-Portfolio/
 
 这些素材的版权归原作者所有，**不在本仓库的代码授权范围内**。本仓库仅用于个人学习记录与作品展示；如需商用或再次分发，请替换为自有素材，或向原作者确认授权。公开发布前建议根据实际素材的许可协议做一次核对。
 
-源码仓库约 330 MB，体积主要来自 Unity 资源（其中 `01-rolling-ball-arcade/Assets/Texture` 的天空盒贴图约 260 MB）。可执行版本放在 GitHub Releases，不占用 Git 仓库。如果后续继续扩展，建议：
+源码仓库约 330 MB，体积主要来自 Unity 资源（其中 `01-rolling-ball-arcade/Assets/Texture` 的天空盒贴图约 260 MB）。可执行版本只放在 GitHub Releases，本地不保留构建目录。如果后续继续扩展，建议：
 
 - 对天空盒等大贴图做压缩或降分辨率处理；
 - 必要时对大文件启用 Git LFS（`.gitattributes` 中已预留注释示例）；

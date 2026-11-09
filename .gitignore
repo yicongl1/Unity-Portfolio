@@ -38,5 +38,5 @@ crashlytics-build.properties
 Thumbs.db
 desktop.ini
 
-# ---------- 本地产物（可执行版本通过 GitHub Releases 发布） ----------
+# ---------- 构建产物（通过 GitHub Releases 发布，不提交） ----------
 builds/
