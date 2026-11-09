@@ -1,19 +1,15 @@
 # Unity 学习作品集
 
-2021–2022 年学习 Unity 游戏开发与 C# 编程期间完成的个人练习合集。仓库包含 **4 个 Unity 原型** 和 **8 个 C# 控制台练习**；**3 个 Windows 可执行版本**通过 GitHub Releases 提供。
+2021–2022 年学习 Unity 游戏开发与 C# 编程期间完成的项目合集，包含 4 个 Unity 原型和 8 个 C# 控制台练习。三个游戏的 Windows 版本放在 GitHub Releases，可以直接下载试玩。
 
-这些项目大多始于教程和课堂练习，后来逐步加入了关卡、UI、状态机、粒子、音效等自己的改动。整理这个仓库的目的有三个：
-
-- 记录从「跟着教程做」到「独立搭玩法」的学习轨迹
-- 作为个人网站作品集的素材库
-- 方便以后回顾 Unity 常用 API 与 C# 基础
+这些项目大多始于教程和课堂练习，后来逐步加入了关卡、UI、状态机、粒子、音效等自己的改动。把它们收在一起，主要是为了记录学习过程，也方便以后回顾 Unity 的常用 API 和 C# 基础。
 
 ---
 
 ## 项目一览
 
-| # | 项目 | 类型 | 我实现的内容 |
-|---|------|------|--------------|
+| # | 项目 | 类型 | 主要内容 |
+|---|------|------|----------|
 | 01 | [滚动球街机合集](unity-projects/01-rolling-ball-arcade/README.md) | 3D / 多场景 | 用主菜单串联 3 个小游戏：滚球闯关、迷宫、拉箱子解谜，另含第一人称控制器演示 |
 | 02 | [飞龙射击](unity-projects/02-dragon-shooter/README.md) | 2D / 竖版射击 | 玩家移动与连发、随机刷怪、敌人受击反馈、Boss 巡逻状态机、屏幕比例适配 |
 | 03 | [变色跑酷](unity-projects/03-color-runner/README.md) | 3D / 无限跑酷 | 自动前进、跳跃、红绿换色、颜色不匹配死亡、粒子与 Game Over UI |
@@ -33,7 +29,7 @@
 - **PullTheBox**：第三人称拉箱子解谜。鼠标指向控制角色朝向，左键伸出手臂抓取箱子，右键放下；把对应颜色的箱子送到同色灯下即可通关。
 - **Mini First Person Controller**：接入的第三方第一人称示例控制器，用于学习移动、视角、跳跃、下蹲、缩放和脚步音效。
 
-我主要练习了：`Rigidbody` 速度与力的区别、`OnTriggerEnter` / `OnCollisionEnter`、`SceneManager` 场景切换、`Time.timeScale` 暂停、协程、UGUI 面板、相机跟随、`LookAt`、音频与材质控制。
+这个项目主要练习了 `Rigidbody` 速度与力的区别、`OnTriggerEnter` / `OnCollisionEnter`、`SceneManager` 场景切换、`Time.timeScale` 暂停、协程、UGUI 面板、相机跟随、`LookAt`、音频与材质控制。
 
 ### 02. 飞龙射击
 
@@ -44,7 +40,7 @@
 - Boss（Guard）先向下移动到指定高度，再在左右边界之间往返巡逻。
 - 背景通过滚动材质 UV 制造移动感，摄像机根据屏幕宽高比动态调整正交尺寸，适配不同分辨率。
 
-我主要练习了：协程刷怪、`Instantiate` 与 `Destroy`、2D 触发器、`Mathf.Clamp`、材质 UV 动画、正交摄像机适配、简单状态机。
+这个项目主要练习了协程刷怪、`Instantiate` 与 `Destroy`、2D 触发器、`Mathf.Clamp`、材质 UV 动画、正交摄像机适配和简单状态机。
 
 ### 03. 变色跑酷
 
@@ -54,7 +50,7 @@
 - 角色颜色必须与脚下平台颜色一致，否则死亡；死亡时根据当前颜色播放不同粒子。
 - 相机用 `Vector3.Lerp` 平滑跟随，失败后弹出 Game Over 面板，可重新开始或退出。
 
-我主要练习了：`Rigidbody.velocity`、碰撞标签判断、`Animator` 参数、粒子预制体、单例式 `GameMode`、UI 回调。
+这个项目主要练习了 `Rigidbody.velocity`、碰撞标签判断、`Animator` 参数、粒子预制体、单例式 `GameMode` 和 UI 回调。
 
 ### 04. 角色移动
 
@@ -108,7 +104,7 @@
 
 ### 下载可执行版本
 
-三个游戏已经打包为 Windows 64 位版本，放在 GitHub Releases，不需要克隆仓库：
+三个游戏已经打包为 Windows 64 位版本，放在 GitHub Releases：
 
 - 滚动球街机合集：`rolling-ball-arcade.zip`
 - 飞龙射击：`dragon-shooter.zip`
@@ -120,13 +116,9 @@
 https://github.com/yicongl1/Unity-Portfolio/releases/latest
 ```
 
-> 如果 GitHub 用户名或仓库名与上面不同，请把地址替换成实际的 `<用户名>/<仓库名>`。
+下载后解压，双击对应的 `.exe`。如果 Windows 弹出 SmartScreen 提示，选择「更多信息 → 仍要运行」。
 
-下载后解压，双击对应目录下的 `.exe`。首次运行若出现 SmartScreen 提示，选择「更多信息 → 仍要运行」。
-
-> 这些可执行文件是学习时期导出的旧构建，整理时对源码做的修复（例如 `PullTheBox` 场景、暂停逻辑）不会自动反映到 exe 中。如需体验最新行为，请用 Unity 打开对应源码工程运行。
->
-> 可执行版本不保存在本地仓库中，统一通过 GitHub Releases 下载。
+这些 exe 来自学习阶段的旧构建，不包含后来对源码的小修复。想体验最新行为，可以用 Unity 打开对应工程运行。
 
 ### 用 Unity 打开源码
 
@@ -147,7 +139,7 @@ https://github.com/yicongl1/Unity-Portfolio/releases/latest
 
 ### 编译 C# 练习
 
-`csharp-exercises` 下每个目录都是一个独立的 .NET Framework 4.7.2 控制台项目。用 Visual Studio 打开对应 `.csproj` 即可运行；也可以把 `.cs` 文件复制到任意 C# 控制台工程中。
+`csharp-exercises` 下每个目录都是一个独立的 .NET Framework 4.7.2 控制台项目。用 Visual Studio 打开 `csharp-exercises/CSharpExercises.sln`，可以一次加载全部 8 个项目；也可以单独打开某个 `.csproj`。
 
 ---
 
@@ -161,6 +153,7 @@ Unity-Portfolio/
 │  ├─ 03-color-runner/
 │  └─ 04-character-move/
 ├─ csharp-exercises/            # C# 控制台练习
+│  ├─ CSharpExercises.sln
 │  ├─ 01-boxing-singleton/
 │  ├─ 02-singleton-and-arrays/
 │  ├─ 03-object-copy/
@@ -175,60 +168,35 @@ Unity-Portfolio/
 └─ README.md
 ```
 
-> 构建产物不保存在仓库中，统一通过 GitHub Releases 发布和下载。
+构建产物不保存在仓库中，统一通过 GitHub Releases 发布和下载。
 
 ---
 
-## 个人网站展示文案
+## 说明
 
-如果要把这个仓库放到个人网站的作品集页面，可以直接使用下面这段简介：
-
-> **Unity 学习作品集（2021–2022）**
->
-> 独立完成 4 个 Unity 原型与 8 个 C# 控制台练习，覆盖 3D 滚球/解谜、2D 竖版射击、无限跑酷和第三人称角色控制。熟悉 Rigidbody 物理、碰撞与触发器、UGUI、场景管理、协程、Animator、粒子与音频，并能用 C# 实现回合制战斗、加权抽卡、单例管理等逻辑。并通过 GitHub Releases 提供 Windows 可执行版本，可直接试玩。
-
-按项目拆分的一句话介绍：
-
-- **滚动球街机合集**：用一个主菜单串联滚球闯关、迷宫和拉箱子解谜三个小游戏，练习场景管理、物理与 UI。
-- **飞龙射击**：2D 竖版射击，包含连发冷却、随机刷怪、受击反馈、Boss 巡逻状态机和屏幕比例适配。
-- **变色跑酷**：3D 无限跑酷，通过跳跃和红绿换色躲避异色平台，包含粒子死亡表现与 Game Over 流程。
-- **角色移动**：第三人称移动 Demo，练习输入、朝向与位移的基本关系。
-
----
-
-## 整理说明
-
-- Unity 工程只保留 `Assets`、`Packages`、`ProjectSettings`，移除了 `Library`、`Temp`、`obj`、`Logs`、`UserSettings`、`.vs` 等生成目录。
-- 去除了 `.DS_Store`、`._*`、`__MACOSX` 等 macOS 元数据文件。
-- 四个 Unity 工程按玩法重新命名，八个 C# 练习按学习顺序编号并改用可读的英文目录名。
-- 统一了 C# 源文件的尾随空格与文件末尾换行。
-- 补上了 `01-rolling-ball-arcade` 中 `PullTheBox` 场景的 Build Settings 配置，使菜单里的「拉箱子」入口可以正常加载。
-- 修复了几处学习期遗留的小问题：Maze 的 Esc 暂停判断、`CoinReset` 的场景名、飞龙射击 UI 的重复加载、变色跑酷开始界面的空引用、角色移动在零输入时的 `LookAt` 警告。
-- 可执行版本不进入 Git 仓库，统一通过 GitHub Releases 发布。
-- 原始压缩包和原始目录仍保留在上级目录中，未做删除或覆盖。
-
-### 已知限制
-
-- 项目基于旧版 Input Manager（`Input.GetAxis`），未使用新 Input System。
-- 部分脚本保留了学习阶段的注释、调试代码和未使用字段，逻辑以可运行和可读为主，没有做大规模重写。
-- `05-gacha-draw` 每次抽卡都会新建 `Random`，属于学习期的简单写法，后续可以改为共享随机源。
-- 资源以学习时导入的第三方素材为主，见下方授权说明。
+- Unity 工程保留 `Assets`、`Packages`、`ProjectSettings`；`Library`、`Temp`、`obj`、`Logs`、`UserSettings` 等生成目录不提交。
+- 可执行版本不进入 Git 仓库，只放在 GitHub Releases。
+- 项目基于旧版 Input Manager（`Input.GetAxis`），没有使用新 Input System。
+- 部分脚本保留了学习阶段的注释、调试代码和未使用字段，逻辑以可运行和可读为主。
+- `05-gacha-draw` 每次抽卡都会新建 `Random`，属于学习期的简单写法；`06-turn-based-battle` 的暴击字段目前只是预留。
 
 ---
 
 ## 第三方资源与授权
 
-代码部分为本人学习期间编写。工程中使用了一些第三方素材，包括但不限于：
+代码为本人学习期间编写。工程中使用了一些第三方素材，包括但不限于：
 
 - Mini First Person Controller（Unity Asset Store 示例控制器）
 - SciFiWarrior 角色模型与动画资源包
 - SampleAssets / SimpleFX 等特效、音效与示例资源
 - 天空盒、贴图、音频等素材
 
-这些素材的版权归原作者所有，**不在本仓库的代码授权范围内**。本仓库仅用于个人学习记录与作品展示；如需商用或再次分发，请替换为自有素材，或向原作者确认授权。公开发布前建议根据实际素材的许可协议做一次核对。
+这些素材的版权归原作者所有，**不在本仓库的代码授权范围内**。仓库仅用于个人学习记录和作品展示；使用或再分发这些素材时，请遵守原作者的许可协议。
 
-源码仓库约 330 MB，体积主要来自 Unity 资源（其中 `01-rolling-ball-arcade/Assets/Texture` 的天空盒贴图约 260 MB）。可执行版本只放在 GitHub Releases，本地不保留构建目录。如果后续继续扩展，建议：
+---
 
-- 对天空盒等大贴图做压缩或降分辨率处理；
-- 必要时对大文件启用 Git LFS（`.gitattributes` 中已预留注释示例）；
-- 新版本继续通过 Releases 分发，而不是提交进 Git。
+## 后续计划
+
+- 压缩 `01-rolling-ball-arcade/Assets/Texture` 中体积较大的天空盒贴图，减小仓库体积。
+- 视需要为大文件启用 Git LFS。
+- 继续用 GitHub Releases 分发后续构建。

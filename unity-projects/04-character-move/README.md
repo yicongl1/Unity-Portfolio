@@ -31,12 +31,10 @@
 - 用 `speed * Time.deltaTime` 保证不同帧率下移动速度一致。
 - 当前移动方向直接使用世界坐标轴，没有做「相对摄像机方向」的转换，适合作为入门示例；要进一步扩展可以改为相机相对移动。
 
-## 整理时的修改
+## 备注
 
-- 增加了零向量判断：没有输入时不再调用 `LookAt(transform.position)`，避免 Unity 输出「旋转向量为零」的警告。
-- 把 `SampleScene` 加入 Build Settings，方便直接构建。
-- 将原本为 GBK 编码的脚本转换为 UTF-8，保证在 GitHub 上中文注释正常显示。
-- 补充了脚本文件末尾换行与尾随空格清理。
+- 没有输入时角色保持当前朝向，不会调用 `LookAt(transform.position)`。
+- `SampleScene` 已加入 Build Settings，可以直接构建。
 
 ## 第三方内容
 

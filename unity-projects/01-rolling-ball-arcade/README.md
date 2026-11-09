@@ -90,11 +90,10 @@ Assets/
 - **拉箱子**：`Playertask` 用摄像机射线把鼠标位置转换成角色朝向，再用触发器检测可抓取的箱子，通过改变手臂 `localScale.z` 做伸缩动画。
 - **相机**：Rolling Ball 用固定偏移 + 左右倾斜；PullTheBox 用 `Quaternion.Lerp` 平滑看向角色。
 
-## 整理时的修改
+## 备注
 
-- 把 `PullTheBox` 场景补充进 Build Settings，修复主菜单按钮无法加载该场景的问题。
-- 把 `CoinReset` 中失效的 `Application.LoadLevel("SampleScene")` 改为 `SceneManager.LoadScene("Maze")`。
-- 修复了 Maze 的 Esc 暂停逻辑：原写法在按下的同一帧里先打开面板又立刻关闭，现在改为一次按键切换暂停状态。
+- 主菜单的「拉箱子」入口依赖 Build Settings 中的 `PullTheBox` 场景，工程里已经配置好。
+- 迷宫场景按 `Esc` 可以暂停 / 继续；重置触发器会重新加载迷宫。
 
 ## 第三方内容
 
