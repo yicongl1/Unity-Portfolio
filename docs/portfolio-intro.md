@@ -2,7 +2,7 @@
 
 ## 短版
 
-Unity 学习作品集，收录 2021–2022 年完成的 4 个 Unity 原型和 8 个 C# 练习。项目覆盖 3D 滚球与解谜、2D 竖版射击、无限跑酷和第三人称角色控制，涉及 Rigidbody 物理、碰撞与触发器、UGUI、场景管理、协程、Animator、粒子与音频。三个 Windows 版本可在 GitHub Releases 直接下载。
+Unity 学习作品集，收录 2021–2022 年完成的 4 个 Unity 原型和 8 个 C# 练习。项目覆盖 3D 滚球与解谜、2D 竖版射击、无限跑酷和第三人称角色控制，涉及 Rigidbody 物理、碰撞与触发器、UGUI、场景管理、协程、Animator、粒子与音频。三个 Windows 版本放在仓库的 `release-assets/` 目录，也可以在 GitHub Releases 下载。
 
 ## 长版
 

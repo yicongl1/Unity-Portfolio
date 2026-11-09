@@ -1,6 +1,6 @@
 # Unity 学习作品集
 
-2021–2022 年学习 Unity 游戏开发与 C# 编程期间完成的项目合集，包含 4 个 Unity 原型和 8 个 C# 控制台练习。三个游戏的 Windows 版本放在 GitHub Releases，可以直接下载试玩。
+2021–2022 年学习 Unity 游戏开发与 C# 编程期间完成的项目合集，包含 4 个 Unity 原型和 8 个 C# 控制台练习。三个游戏的 Windows 版本放在 `release-assets/`，同时发布在 GitHub Releases。
 
 这些项目大多始于教程和课堂练习，后来逐步加入了关卡、UI、状态机、粒子、音效等自己的改动。把它们收在一起，主要是为了记录学习过程，也方便以后回顾 Unity 的常用 API 和 C# 基础。
 
@@ -104,17 +104,15 @@
 
 ### 下载可执行版本
 
-三个游戏已经打包为 Windows 64 位版本，放在 GitHub Releases：
+三个游戏已经打包为 Windows 64 位版本，放在 `release-assets/`：
 
-- 滚动球街机合集：`rolling-ball-arcade.zip`
-- 飞龙射击：`dragon-shooter.zip`
-- 变色跑酷：`color-runner.zip`
+| 游戏 | 文件 | 大小 |
+|------|------|------|
+| 滚动球街机合集 | [rolling-ball-arcade.zip](release-assets/rolling-ball-arcade.zip) | 61.8 MB |
+| 飞龙射击 | [dragon-shooter.zip](release-assets/dragon-shooter.zip) | 26.2 MB |
+| 变色跑酷 | [color-runner.zip](release-assets/color-runner.zip) | 25.6 MB |
 
-下载地址：
-
-```text
-https://github.com/yicongl1/Unity-Portfolio/releases/latest
-```
+这些压缩包也发布在 [GitHub Releases](https://github.com/yicongl1/Unity-Portfolio/releases/latest)，可以从那里下载。
 
 下载后解压，双击对应的 `.exe`。如果 Windows 弹出 SmartScreen 提示，选择「更多信息 → 仍要运行」。
 
@@ -164,13 +162,18 @@ Unity-Portfolio/
 │  └─ 08-water-bottle/
 ├─ docs/
 │  └─ portfolio-intro.md
+├─ release-assets/              # Windows 构建包
+│  ├─ README.md
+│  ├─ rolling-ball-arcade.zip
+│  ├─ dragon-shooter.zip
+│  └─ color-runner.zip
 ├─ .editorconfig
 ├─ .gitattributes
 ├─ .gitignore
 └─ README.md
 ```
 
-构建产物不保存在仓库中，统一通过 GitHub Releases 发布和下载。
+`release-assets/` 保存 Windows 构建包，GitHub Releases 提供同样的下载；解压后的 `builds/` 目录不提交。
 
 ---
 
@@ -183,7 +186,7 @@ Unity-Portfolio/
 ## 说明
 
 - Unity 工程保留 `Assets`、`Packages`、`ProjectSettings`；`Library`、`Temp`、`obj`、`Logs`、`UserSettings` 等生成目录不提交。
-- 可执行版本不进入 Git 仓库，只放在 GitHub Releases。
+- 可执行版本保存在 `release-assets/`，同时发布在 GitHub Releases。
 - 项目基于旧版 Input Manager（`Input.GetAxis`），没有使用新 Input System。
 - 部分脚本保留了学习阶段的注释、调试代码和未使用字段，逻辑以可运行和可读为主。
 - `05-gacha-draw` 每次抽卡都会新建 `Random`，属于学习期的简单写法；`06-turn-based-battle` 的暴击字段目前只是预留。
@@ -207,4 +210,4 @@ Unity-Portfolio/
 
 - 压缩 `01-rolling-ball-arcade/Assets/Texture` 中体积较大的天空盒贴图，减小仓库体积。
 - 视需要为大文件启用 Git LFS。
-- 继续用 GitHub Releases 分发后续构建。
+- 更新 `release-assets/` 中的构建包，并同步到 GitHub Releases。
