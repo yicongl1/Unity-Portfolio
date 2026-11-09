@@ -162,6 +162,8 @@ Unity-Portfolio/
 │  ├─ 06-turn-based-battle/
 │  ├─ 07-dictionary/
 │  └─ 08-water-bottle/
+├─ docs/
+│  └─ portfolio-intro.md
 ├─ .editorconfig
 ├─ .gitattributes
 ├─ .gitignore
@@ -169,6 +171,12 @@ Unity-Portfolio/
 ```
 
 构建产物不保存在仓库中，统一通过 GitHub Releases 发布和下载。
+
+---
+
+## 文档
+
+- [个人网站简介](docs/portfolio-intro.md)
 
 ---
 
