@@ -1,0 +1,42 @@
+# ---------- Unity ----------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Unity crash / cache files
+sysinfo.txt
+crashlytics-build.properties
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# ---------- Visual Studio / Rider ----------
+.vs/
+.idea/
+*.csproj.user
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# ---------- C# ----------
+[Bb]in/
+[Oo]bj/
+
+# ---------- OS ----------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---------- 本地产物（可执行版本通过 GitHub Releases 发布） ----------
+builds/
